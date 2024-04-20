@@ -1,0 +1,14 @@
+server:
+  port: 8081
+spring:
+  cloud:
+    function:
+      definition: consumer
+    stream:
+      bindings:
+        consumer-in-0:
+          destination: user
+    gcp:
+      pubsub:
+        project-id: reactive-sample
+        emulator-host: localhost:8090
